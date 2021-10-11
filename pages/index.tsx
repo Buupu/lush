@@ -185,28 +185,26 @@ const Home: NextPage<HomePageProps> = (results) => {
           <SideBar handleSearch={handleSearch} searchInput={searchInput}>
             <Accordion allowToggle w="full" borderColor="transparent">
               <FilterAccordationItem expandButtonLabel="Categories">
-                <VStack align="flex-start" spacing={0}>
-                  <Button
-                    variant="secondary"
-                    fontWeight={categoryId === "" ? "bold" : "normal"}
-                    onClick={() => handleChangeCategory("")}
-                  >
-                    All Products
-                  </Button>
-                  {results.categories.map((category) => {
-                    const node = category.node;
-                    return (
-                      <Button
-                        variant="secondary"
-                        fontWeight={categoryId === node?.id ? "bold" : "normal"}
-                        onClick={() => handleChangeCategory(node?.id)}
-                        key={node?.id}
-                      >
-                        {node?.name}
-                      </Button>
-                    );
-                  })}
-                </VStack>
+                <Button
+                  variant="secondary"
+                  fontWeight={categoryId === "" ? "bold" : "normal"}
+                  onClick={() => handleChangeCategory("")}
+                >
+                  All Products
+                </Button>
+                {results.categories.map((category) => {
+                  const node = category.node;
+                  return (
+                    <Button
+                      variant="secondary"
+                      fontWeight={categoryId === node?.id ? "bold" : "normal"}
+                      onClick={() => handleChangeCategory(node?.id)}
+                      key={node?.id}
+                    >
+                      {node?.name}
+                    </Button>
+                  );
+                })}
               </FilterAccordationItem>
 
               <FilterAccordationItem expandButtonLabel="Sort by">
