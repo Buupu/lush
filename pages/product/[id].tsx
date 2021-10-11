@@ -76,7 +76,7 @@ export default function Product({ product }: ProductPageProps) {
       <Layout>
         <SideBar>
           <Link href="/" passHref>
-            <Button variant="secondary" p={2}>
+            <Button variant="secondary" px={6} py={2}>
               Return to products
             </Button>
           </Link>
