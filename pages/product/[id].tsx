@@ -76,7 +76,9 @@ export default function Product({ product }: ProductPageProps) {
       <Layout>
         <SideBar>
           <Link href="/" passHref>
-            <Button variant="secondary">Return to products</Button>
+            <Button variant="secondary" p={2}>
+              Return to products
+            </Button>
           </Link>
         </SideBar>
         <SimpleGrid columns={[1, 1, 2]} w="full" px={[2, 2, 0]} py={6} gap={6}>
