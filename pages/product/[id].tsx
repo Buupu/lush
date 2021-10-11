@@ -42,11 +42,12 @@ export default function Product({ product }: ProductPageProps) {
     const elements: ReactNode[] = [];
 
     parsedDesc?.blocks?.forEach(
-      (block: { type: string; data: { text: string } }) => {
+      (block: { type: string; data: { text: string } }, index: number) => {
         if (block.type === "paragraph")
           elements.push(
             <Box
               py={2}
+              key={`${product.name}-block-${index}`}
               dangerouslySetInnerHTML={{ __html: block.data?.text }}
             ></Box>,
           );
