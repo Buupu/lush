@@ -79,7 +79,7 @@ export default function Product({ product }: ProductPageProps) {
             <Button variant="secondary">Return to products</Button>
           </Link>
         </SideBar>
-        <SimpleGrid columns={[1, 1, 2]} w="full" py={6} gap={6}>
+        <SimpleGrid columns={[1, 1, 2]} w="full" px={[2, 2, 0]} py={6} gap={6}>
           <Box>
             <AspectRatio ratio={1 / 1} bg="gray.50">
               <Image
