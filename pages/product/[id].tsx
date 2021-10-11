@@ -41,7 +41,7 @@ export default function Product({ product }: ProductPageProps) {
 
     const elements: ReactNode[] = [];
 
-    parsedDesc.blocks?.forEach(
+    parsedDesc?.blocks?.forEach(
       (block: { type: string; data: { text: string } }) => {
         if (block.type === "paragraph")
           elements.push(
