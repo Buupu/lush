@@ -239,7 +239,7 @@ const Home: NextPage<HomePageProps> = (results) => {
               <>
                 {products.length > 0 && (
                   <SimpleGrid
-                    columns={[1, 2, 2, 3, 4, 5]}
+                    columns={[2, 2, 2, 3, 4, 5]}
                     spacingY={6}
                     spacingX={2}
                     py={6}
