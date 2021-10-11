@@ -52,8 +52,8 @@ export const SideBar: React.FC<SideBarProps> = ({
           </InputRightElement>
         </InputGroup>
       )}
-
-      {children}
     </Flex>
+
+    {children}
   </Box>
 );
